@@ -21,9 +21,9 @@ export default function Home() {
       <div className="relative">
         <div className="hidden sm:block absolute w-full h-full -top-[5%]">
           <Image
-            src="/images/desktop/PawsPath.svg" 
-            alt="wave" 
-            fill={true}
+            src="/images/desktop/PawsPath.svg"
+            alt="wave"
+            fill
             className="object-contain"
           />
         </div>
