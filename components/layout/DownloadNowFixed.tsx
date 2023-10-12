@@ -16,7 +16,7 @@ function DownloadNowFixed() {
     setTimeout(() => {
       setCloseDisplay(true);
     }, 600);
-  }
+  };
 
   useEffect(() => {
     if (!closeDisplay) {
@@ -28,7 +28,7 @@ function DownloadNowFixed() {
     }
   }, [controls, scrollUp, closeDisplay]);
 
-  if(closeDisplay) return;
+  if (closeDisplay) return;
 
   return (
     <motion.div
@@ -49,10 +49,22 @@ function DownloadNowFixed() {
             className="object-contain"
           />
         </div>
-        <button onClick={handleClose} className="absolute -top-[15px] right-1 active:scale-95 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 47" fill="none">
-            <circle cx="24.0662" cy="23.6846" r="23.2168" fill="#857369"/>
-            <path d="M33.077 16.6764C33.6306 16.1228 33.6306 15.2276 33.077 14.6799C32.5234 14.1322 31.6282 14.1263 31.0805 14.6799L24.0722 21.6882L17.058 14.674C16.5044 14.1204 15.6092 14.1204 15.0615 14.674C14.5138 15.2276 14.5079 16.1228 15.0615 16.6705L22.0698 23.6788L15.0556 30.693C14.502 31.2466 14.502 32.1418 15.0556 32.6895C15.6092 33.2372 16.5044 33.2431 17.0521 32.6895L24.0604 25.6812L31.0746 32.6954C31.6282 33.249 32.5234 33.249 33.0711 32.6954C33.6188 32.1418 33.6247 31.2466 33.0711 30.6989L26.0628 23.6906L33.077 16.6764Z" fill="white"/>
+        <button
+          onClick={handleClose}
+          className="absolute -top-[15px] right-1 active:scale-95 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 48 47"
+            fill="none"
+          >
+            <circle cx="24.0662" cy="23.6846" r="23.2168" fill="#857369" />
+            <path
+              d="M33.077 16.6764C33.6306 16.1228 33.6306 15.2276 33.077 14.6799C32.5234 14.1322 31.6282 14.1263 31.0805 14.6799L24.0722 21.6882L17.058 14.674C16.5044 14.1204 15.6092 14.1204 15.0615 14.674C14.5138 15.2276 14.5079 16.1228 15.0615 16.6705L22.0698 23.6788L15.0556 30.693C14.502 31.2466 14.502 32.1418 15.0556 32.6895C15.6092 33.2372 16.5044 33.2431 17.0521 32.6895L24.0604 25.6812L31.0746 32.6954C31.6282 33.249 32.5234 33.249 33.0711 32.6954C33.6188 32.1418 33.6247 31.2466 33.0711 30.6989L26.0628 23.6906L33.077 16.6764Z"
+              fill="white"
+            />
           </svg>
         </button>
         <h1 className="text-xl text-brown tracking-[8px] text-center">
@@ -78,7 +90,7 @@ function DownloadNowFixed() {
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
-export default DownloadNowFixed
+export default DownloadNowFixed;

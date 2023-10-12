@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function SearchFilter() {
   return (
@@ -27,7 +27,9 @@ function SearchFilter() {
               Enhanced Search Filters
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%] max-w-[650px]">
-              Thanks to our customizable search filters, find your pet faster based on specific criteria such as breed, size, color and location.
+              Thanks to our customizable search filters, find your pet faster
+              based on specific criteria such as breed, size, color and
+              location.
             </p>
           </div>
           <div className="relative aspect-square">
@@ -41,7 +43,7 @@ function SearchFilter() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default SearchFilter
+export default SearchFilter;

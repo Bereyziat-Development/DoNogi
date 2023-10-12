@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function Localisation() {
   return (
@@ -35,13 +35,15 @@ function Localisation() {
               Localisation
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Pinpoint the last known location of a lost pet. This feature enables users to track their pet&apos;s movements and narrow down search areas.
+              Pinpoint the last known location of a lost pet. This feature
+              enables users to track their pet&apos;s movements and narrow down
+              search areas.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Localisation
+export default Localisation;

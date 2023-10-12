@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function Hero() {
   return (
@@ -26,16 +26,20 @@ function Hero() {
             Find Your Lost Pet with Ease in Warsaw!
           </h1>
           <p className="text-paragraph text-lg md:text-xl leading-[150%]">
-            Welcome to our app designed to reunite pet owners with their beloved furry friends in the bustling city of Warsaw! We understand the heartbreak and worry that comes with losing a pet, which is why we&apos;ve created the app to make the search for lost pets quicker, easier, and more effective than ever before.
+            Welcome to our app designed to reunite pet owners with their beloved
+            furry friends in the bustling city of Warsaw! We understand the
+            heartbreak and worry that comes with losing a pet, which is why
+            we&apos;ve created the app to make the search for lost pets quicker,
+            easier, and more effective than ever before.
           </p>
           <div className="pt-4 md:pt-0">
-              <button className="btn-gradient px-6 py-3.5 font-semibold ">
+            <button className="btn-gradient px-6 py-3.5 font-semibold ">
               Download Do Nogi app now!
-              </button>
+            </button>
           </div>
         </div>
         <div className="w-full aspect-square mt-10 sm:mt-0 overflow-x-hidden">
-          <div className="w-full sm:w-[90%] md:w-[72%] right-[50%] translate-x-[50%] md:translate-x-0 md:-right-[18%] md:-top-[20px] xl:-top-[100px] absolute aspect-square overflow-x-hidden" >
+          <div className="w-full sm:w-[90%] md:w-[72%] right-[50%] translate-x-[50%] md:translate-x-0 md:-right-[18%] md:-top-[20px] xl:-top-[100px] absolute aspect-square overflow-x-hidden">
             <Image
               src="/images/desktop/HeroImage.png"
               alt="logo"
@@ -46,7 +50,7 @@ function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

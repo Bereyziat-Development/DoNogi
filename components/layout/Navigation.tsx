@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 function Navigation() {
   return (
@@ -35,7 +35,7 @@ function Navigation() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;

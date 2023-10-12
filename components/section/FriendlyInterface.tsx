@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function FriendlyInterface() {
   return (
@@ -35,13 +35,16 @@ function FriendlyInterface() {
               A Friendly Interface
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              DoNogi is intuitive and easy to use, even for those who may not be tech-savvy. Whether you&apos;re a pet owner or someone who wants to lend a helping hand, we guarantee a seamless experience for everyone involved.
+              DoNogi is intuitive and easy to use, even for those who may not be
+              tech-savvy. Whether you&apos;re a pet owner or someone who wants
+              to lend a helping hand, we guarantee a seamless experience for
+              everyone involved.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default FriendlyInterface
+export default FriendlyInterface;

@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function DetailPageProfiles() {
   return (
@@ -27,7 +27,8 @@ function DetailPageProfiles() {
               Detailed Pet Profiles
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Create your pet profile, including all relevant details to help others recognize your friend.
+              Create your pet profile, including all relevant details to help
+              others recognize your friend.
             </p>
           </div>
           <div className="relative aspect-square">
@@ -41,7 +42,7 @@ function DetailPageProfiles() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default DetailPageProfiles
+export default DetailPageProfiles;

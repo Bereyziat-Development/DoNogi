@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 function DownloadNow() {
   return (
@@ -44,10 +44,15 @@ function DownloadNow() {
             Download Now!
           </h1>
           <p className="text-lg md:text-xl leading-[150%] mt-8 text-secondary">
-            Join our community of pet lovers in Warsaw, and help bring joy and relief to countless families by reuniting them with their furry companions.
+            Join our community of pet lovers in Warsaw, and help bring joy and
+            relief to countless families by reuniting them with their furry
+            companions.
           </p>
           <div className="w-full flex items-center justify-between gap-4 mt-10">
-            <Link href="/" className="relative w-full aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]">
+            <Link
+              href="/"
+              className="relative w-full aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
+            >
               <Image
                 src="/images/app-store.png"
                 alt="app store badge"
@@ -55,7 +60,10 @@ function DownloadNow() {
                 className="object-contain"
               />
             </Link>
-            <Link href="/" className="relative w-full max-w-[160px] aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]">
+            <Link
+              href="/"
+              className="relative w-full max-w-[160px] aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
+            >
               <Image
                 src="/images/google-play.png"
                 alt="google play badge"
@@ -67,7 +75,7 @@ function DownloadNow() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default DownloadNow
+export default DownloadNow;

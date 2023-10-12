@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="relative py-10 mt-4 xl:mt-0">
@@ -50,7 +50,10 @@ function Footer() {
             />
           </div>
           <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-between gap-4 mt-10">
-            <Link href="/" className="relative w-full max-w-[211px] aspect-[3/1]">
+            <Link
+              href="/"
+              className="relative w-full max-w-[211px] aspect-[3/1]"
+            >
               <Image
                 src="/images/app-store.png"
                 alt="app store badge"
@@ -58,7 +61,10 @@ function Footer() {
                 className="object-contain"
               />
             </Link>
-            <Link href="/" className="relative w-full max-w-[211px] aspect-[3/1]">
+            <Link
+              href="/"
+              className="relative w-full max-w-[211px] aspect-[3/1]"
+            >
               <Image
                 src="/images/google-play.png"
                 alt="google play badge"
@@ -73,10 +79,14 @@ function Footer() {
         </div>
         <div className="w-full flex flex-col justify-end lg:justify-center mt-10 md:mt-0">
           <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown lg:text-xl whitespace-nowrap">
-            Follow us <br />on social media
+            Follow us <br />
+            on social media
           </h3>
           <div className="flex flex-row gap-8 md:gap-14 xl:grid items-center xl:grid-cols-3 xl:gap-4 mt-10 max-w-[375px] mx-auto">
-            <Link href="/" className="text-center text-brown flex flex-col items-center gap-4">
+            <Link
+              href="/"
+              className="text-center text-brown flex flex-col items-center gap-4"
+            >
               <div className="max-w-[45px] lg:max-w-[64px] relative w-full aspect-square group">
                 <Image
                   src="/images/social-media/FacebookActiveFalse.svg"
@@ -91,7 +101,7 @@ function Footer() {
                   className="object-contain opacity-0 group-hover:opacity-100 transition-all duration-200 scale-[1.45]"
                 />
               </div>
-              <span className='whitespace-nowrap'>Do Nogi</span>
+              <span className="whitespace-nowrap">Do Nogi</span>
             </Link>
             <div className="hidden xl:block relative w-full aspect-square">
               <Image
@@ -101,7 +111,10 @@ function Footer() {
                 className="object-contain"
               />
             </div>
-            <Link href="/" className="text-center text-brown flex flex-col items-center gap-4">
+            <Link
+              href="/"
+              className="text-center text-brown flex flex-col items-center gap-4"
+            >
               <div className="max-w-[45px] lg:max-w-[64px] relative w-full aspect-square group">
                 <Image
                   src="/images/social-media/InstagramActiveFalse.svg"
@@ -135,12 +148,13 @@ function Footer() {
           </div>
           <span className="block md:hidden text-center text-brown mb-14">
             © {currentYear} <b className="underline">Bereyziat Development</b>,
-            <br />All rights reserved.
+            <br />
+            All rights reserved.
           </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

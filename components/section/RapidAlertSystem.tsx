@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 function RapidAlertSystem() {
   return (
@@ -43,13 +43,15 @@ function RapidAlertSystem() {
               Rapid Alert System
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Our app helps find missing pets by alerting nearby pet lovers, increasing the chances of locating your lost companion quickly. Owners are also notified when a matching pet is found.
+              Our app helps find missing pets by alerting nearby pet lovers,
+              increasing the chances of locating your lost companion quickly.
+              Owners are also notified when a matching pet is found.
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default RapidAlertSystem
+export default RapidAlertSystem;
