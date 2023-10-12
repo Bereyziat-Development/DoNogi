@@ -7,7 +7,7 @@ function Localisation() {
       <div className="px-4 md:container mx-auto">
         <div className="hidden sm:block absolute w-full md:w-[65%] -top-[40%] md:-top-[10%] -left-[30%] md:-left-[10%] aspect-square">
           <Image
-            src="/images/shapes/LocalisationShapes.svg" 
+            src="/images/shapes/LocalisationShapes.svg"
             alt="logo"
             fill={true}
             className="object-top -z-[1]"
@@ -15,16 +15,16 @@ function Localisation() {
         </div>
         <div className="block sm:hidden absolute w-full aspect-[1/2] -top-[5%] left-0">
           <Image
-            src="/images/mobile/LocalisationShapesPaws.svg" 
+            src="/images/mobile/LocalisationShapesPaws.svg"
             alt="logo"
             fill={true}
             className="object-top -z-[1] object-contain"
           />
         </div>
         <div className="relative w-full flex flex-col sm:grid grid-cols-2 px-4">
-          <div className="relative max-w-[730px] scale-125 sm:scale-100 aspect-[3/4] sm:aspect-square sm:left-[10%]">
+          <div className="relative aspect-square">
             <Image
-              src="/images/desktop/LocalisationImage.png" 
+              src="/images/desktop/LocalisationImage.png"
               alt="logo"
               fill={true}
               className="object-contain z-10"

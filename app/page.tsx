@@ -5,16 +5,18 @@ import Footer from '@/components/layout/Footer'
 import Navigation from '@/components/layout/Navigation'
 import DetailPageProfiles from '@/components/section/DetailedPetProfiles'
 import DownloadNow from '@/components/section/DownloadNow'
-import FriendlyInterface from '@/components/section/FrienldyInterface'
+import FriendlyInterface from '@/components/section/FriendlyInterface'
 import Hero from '@/components/section/Hero'
 import Localisation from '@/components/section/Localisation'
 import RapidAlertSystem from '@/components/section/RapidAlertSystem'
 import SearchFilter from '@/components/section/SearchFilter'
 import Image from 'next/image'
 
+// Hero, Detailed Pet, Enhanced Search Filters shapes
+
 export default function Home() {
   return (
-    <>
+    <div className='w-full'>
       <DownloadNowFixed />
       <Navigation />
       <Hero />
@@ -27,16 +29,16 @@ export default function Home() {
             className="object-contain"
           />
         </div>
-        <RapidAlertSystem />
-        <div className="relative xl:-top-[200px]">
-          <DetailPageProfiles />
-          <Localisation />
-          <SearchFilter />
-          <FriendlyInterface />
-          <DownloadNow />
+        <div className='-mt-6 xl:-mt-48'>
+            <RapidAlertSystem />
+            <DetailPageProfiles />
+            <Localisation />
+            <SearchFilter />
+            <FriendlyInterface />
+            <DownloadNow />`
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   )
 }

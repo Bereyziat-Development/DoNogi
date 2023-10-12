@@ -7,15 +7,15 @@ function SearchFilter() {
       <div className="px-4 lg:container mx-auto">
         <div className="hidden md:block absolute w-[80%] -top-[37vw] -right-[17vw] aspect-square">
           <Image
-            src="/images/shapes/FiltersShapes.svg" 
+            src="/images/shapes/FiltersShapes.svg"
             alt="logo"
             fill={true}
-            className="object-top -z-[1]"
+            className="object-right-top -z-[1]"
           />
         </div>
-        <div className="block sm:hidden absolute w-full aspect-square -mt-4">
+        <div className="block sm:hidden absolute inset-0 -mt-4">
           <Image
-            src="/images/mobile/FiltersPaws.svg" 
+            src="/images/mobile/FiltersPaws.svg"
             alt="logo"
             fill={true}
             className="object-top -z-[1]"
@@ -30,9 +30,9 @@ function SearchFilter() {
               Thanks to our customizable search filters, find your pet faster based on specific criteria such as breed, size, color and location.
             </p>
           </div>
-          <div className="relative scale-125 sm:scale-100 aspect-square max-w-[600px] sm:left-[14%] xl:left-[100px] xl:top-[70px]">
+          <div className="relative aspect-square">
             <Image
-              src="/images/desktop/FiltersImage.png" 
+              src="/images/desktop/FiltersImage.png"
               alt="logo"
               fill={true}
               className="object-contain"

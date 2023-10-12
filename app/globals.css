@@ -10,24 +10,26 @@
   --paragraph: #857369;
   --yellow: #FFE999;
   --brown: #7F1C0B;
+  --cta-gradient: linear-gradient(314deg, var(--secondary) 2.09%, var(--primary)  100%);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-  width: 100%;
+  overflow-x: hidden !important;
+  width: 100% !important;
   height: 100%;
 }
 
 .btn-gradient {
   border-radius: 100px;
-  background: var(--cta-gradient, linear-gradient(314deg, var(--secondary) 2.09%, var(--primary)  100%));
+  background: var(--cta-gradient);
   box-shadow: 4px 4px 26px 0 rgba(229, 144, 4, 0.70);
   color: white;
 }
 
+
 .text-gradient {
-  background: var(--cta-gradient, linear-gradient(314deg, var(--secondary) 2.09%, var(--primary)  100%));
+  background: var(--cta-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

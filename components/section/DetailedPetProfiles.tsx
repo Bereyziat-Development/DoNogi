@@ -7,15 +7,15 @@ function DetailPageProfiles() {
       <div className="px-4 md:container mx-auto">
         <div className="hidden md:block absolute w-[55%] -top-[15%] -right-[10%] aspect-square">
           <Image
-            src="/images/shapes/PetProfileShapes.svg" 
+            src="/images/shapes/PetProfileShapes.svg"
             alt="logo"
             fill={true}
-            className="object-top -z-[1]"
+            className="object-right-top -z-[1]"
           />
         </div>
         <div className="block sm:hidden absolute inset-0 -mt-14">
           <Image
-            src="/images/mobile/PetProfilePaws.svg" 
+            src="/images/mobile/PetProfilePaws.svg"
             alt="logo"
             fill={true}
             className="object-top -z-[1]"
@@ -32,7 +32,7 @@ function DetailPageProfiles() {
           </div>
           <div className="relative aspect-square">
             <Image
-              src="/images/desktop/PetProfileImage.png" 
+              src="/images/desktop/PetProfileImage.png"
               alt="logo"
               fill={true}
               className="object-contain"
