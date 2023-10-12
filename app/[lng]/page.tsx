@@ -11,10 +11,15 @@ import Localisation from '@/components/section/Localisation';
 import RapidAlertSystem from '@/components/section/RapidAlertSystem';
 import SearchFilter from '@/components/section/SearchFilter';
 import Image from 'next/image';
+import { PageTypes } from '@/@types/page-types';
 
-// Hero, Detailed Pet, Enhanced Search Filters shapes
+//TODO: Hero, Detailed Pet, Enhanced Search Filters shapes
 
-export default function Home() {
+export default function Home(props: PageTypes) {
+  const {
+    params: { lng },
+  } = props;
+
   return (
     <div className="w-full">
       <DownloadNowFixed />
@@ -35,7 +40,7 @@ export default function Home() {
           <Localisation />
           <SearchFilter />
           <FriendlyInterface />
-          <DownloadNow />`
+          <DownloadNow />
         </div>
       </div>
       <Footer />

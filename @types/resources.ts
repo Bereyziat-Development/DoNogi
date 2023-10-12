@@ -1,7 +1,7 @@
-import common from '../public/locales/en/common.json';
+import common from '@/app/i18n/locales/en/translations.json';
 
 const resources = {
-  common
+  common,
 } as const;
 
 export default resources;

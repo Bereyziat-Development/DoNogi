@@ -3,7 +3,7 @@ import React from 'react';
 
 function Hero() {
   return (
-    <section className="px-8 md:px-0 lg:container mx-auto md:pt-10 sm:pt-0 md:py-20 xl:py-10">
+    <section className="lg:container mx-auto md:pt-10 sm:pt-0 md:py-20 xl:py-10">
       <div className="hidden md:block absolute w-[60%] top-0 right-0 aspect-square">
         <Image
           src="/images/desktop/HeroShapes.svg"
@@ -20,8 +20,8 @@ function Hero() {
           className="object-top"
         />
       </div>
-      <div className="md:py-20 w-full relative flex flex-col-reverse items-center md:grid grid-cols-2">
-        <div className="max-w-[537px] md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center">
+      <div className="px-8 md:py-20 w-full relative flex flex-col-reverse items-center md:grid grid-cols-2">
+        <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center">
           <h1 className="text-gradient text-5xl lg:text-6xl font-bold leading-[140%]">
             Find Your Lost Pet with Ease in Warsaw!
           </h1>
