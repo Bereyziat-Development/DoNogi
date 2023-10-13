@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import useScrollDirectionToUp from '@/hooks/useScrollDirectionToUp';
 
 function DownloadNowFixed() {
+  const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
+
   const [closeDisplay, setCloseDisplay] = useState(false);
   const controls = useAnimation();
   const scrollUp = useScrollDirectionToUp();
@@ -35,7 +37,9 @@ function DownloadNowFixed() {
       initial={{ y: '140%' }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      className="block sm:hidden fixed left-0 bottom-0 w-full z-[999]"
+      className={`${isWebsitePublished ? 'block' : 'hidden'} ${
+        isWebsitePublished && 'sm:hidden'
+      } fixed left-0 bottom-0 w-full z-[999]`}
       style={{
         boxShadow: '0px 0px 15px -1px rgba(0,0,0,0.75)',
       }}
