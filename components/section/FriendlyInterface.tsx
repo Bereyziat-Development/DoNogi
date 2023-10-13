@@ -21,8 +21,8 @@ function FriendlyInterface() {
             className="object-contain"
           />
         </div>
-        <div className="relative w-full flex flex-col items-center md:grid grid-cols-2 px-4 xl:translate-y-24">
-          <div className="relative w-full aspect-square max-w-[700px] xl:translate-x-6">
+        <div className="relative w-full flex flex-col items-center md:grid grid-cols-2 px-4 xl:translate-y-14">
+          <div className="relative w-full aspect-square max-w-[680px]">
             <Image
               src="/images/desktop/NewFriends.png"
               alt="logo"

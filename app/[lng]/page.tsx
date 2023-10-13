@@ -13,7 +13,7 @@ import SearchFilter from '@/components/section/SearchFilter';
 import Image from 'next/image';
 import { PageTypes } from '@/@types/page-types';
 
-//TODO: Hero, Detailed Pet, Enhanced Search Filters shapes
+// TODO: Hero, Detailed Pet, Enhanced Search Filters shapes
 
 export default function Home(props: PageTypes) {
   const {
