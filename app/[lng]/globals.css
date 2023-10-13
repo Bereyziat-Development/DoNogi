@@ -27,7 +27,6 @@ body {
   color: white;
 }
 
-
 .text-gradient {
   background: var(--cta-gradient);
   background-clip: text;

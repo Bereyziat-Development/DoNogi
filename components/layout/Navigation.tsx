@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
 function Navigation() {
+  const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
+
   return (
     <header className="fixed inset-x-0 z-[999] bg-white bg-opacity-10 backdrop-blur-sm">
       <div className="relative px-10 py-2 sm:py-0  lg:px-32 mx-auto flex items-center gap-4 justify-between">
@@ -28,7 +30,7 @@ function Navigation() {
             className="object-contain"
           />
         </div>
-        <div className="hidden md:block relative">
+        <div className={`hidden ${isWebsitePublished && 'md:block'} relative`}>
           <button className="btn-gradient px-6 py-3.5 font-semibold">
             Download Do Nogi app now!
           </button>

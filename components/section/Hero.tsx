@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
+import WaitingListForm from '@/components/WaitingListForm';
 
 function Hero() {
+  const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
+
   return (
     <section className="lg:container mx-auto md:pt-10 sm:pt-0 md:py-20 xl:py-10">
       <div className="hidden md:block absolute w-[60%] top-0 right-0 aspect-square">
@@ -33,9 +36,13 @@ function Hero() {
             easier, and more effective than ever before.
           </p>
           <div className="pt-4 md:pt-0">
-            <button className="btn-gradient px-6 py-3.5 font-semibold ">
-              Download Do Nogi app now!
-            </button>
+            {isWebsitePublished ? (
+              <button className="btn-gradient px-6 py-3.5 font-semibold">
+                Download Do Nogi app now!
+              </button>
+            ) : (
+              <WaitingListForm showExtraTitle />
+            )}
           </div>
         </div>
         <div className="w-full aspect-square mt-10 sm:mt-0 overflow-x-hidden">
