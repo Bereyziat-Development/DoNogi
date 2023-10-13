@@ -5,14 +5,14 @@ function SearchFilter() {
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 lg:container mx-auto">
-        <div className="hidden md:block absolute w-[80%] -top-[37vw] -right-[17vw] aspect-square">
-          <Image
-            src="/images/shapes/FiltersShapes.svg"
-            alt="logo"
-            fill={true}
-            className="object-right-top -z-[1]"
-          />
-        </div>
+        {/*<div className="hidden md:block absolute w-[80%] -top-[37vw] -right-[17vw] aspect-square">*/}
+        {/*  <Image*/}
+        {/*    src="/images/shapes/FiltersShapes.svg"*/}
+        {/*    alt="logo"*/}
+        {/*    fill={true}*/}
+        {/*    className="object-right-top -z-[1]"*/}
+        {/*  />*/}
+        {/*</div>*/}
         <div className="block sm:hidden absolute inset-0 -mt-4">
           <Image
             src="/images/mobile/FiltersPaws.svg"

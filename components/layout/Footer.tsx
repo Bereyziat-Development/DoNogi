@@ -78,7 +78,7 @@ function Footer() {
           </span>
         </div>
         <div className="w-full flex flex-col justify-end lg:justify-center mt-10 md:mt-0">
-          <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown lg:text-xl whitespace-nowrap">
+          <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown md:text-sm lg:text-xl whitespace-nowrap">
             Follow us <br />
             on social media
           </h3>
@@ -87,7 +87,7 @@ function Footer() {
               href="/"
               className="text-center text-brown flex flex-col items-center gap-4"
             >
-              <div className="max-w-[45px] lg:max-w-[64px] relative w-full aspect-square group">
+              <div className="max-w-[30px] lg:max-w-[64px] relative w-full aspect-square group">
                 <Image
                   src="/images/social-media/FacebookActiveFalse.svg"
                   alt="facebook"
@@ -115,7 +115,7 @@ function Footer() {
               href="/"
               className="text-center text-brown flex flex-col items-center gap-4"
             >
-              <div className="max-w-[45px] lg:max-w-[64px] relative w-full aspect-square group">
+              <div className="max-w-[30px] lg:max-w-[64px] relative w-full aspect-square group">
                 <Image
                   src="/images/social-media/InstagramActiveFalse.svg"
                   alt="instagram"

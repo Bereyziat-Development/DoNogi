@@ -12,5 +12,5 @@ datasource db {
 model contacts {
   id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   created_at DateTime @default(now()) @db.Timestamptz(6)
-  email      String?  @default("") @db.VarChar
+  email      String   @unique @db.VarChar
 }

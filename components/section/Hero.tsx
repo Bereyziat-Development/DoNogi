@@ -24,7 +24,7 @@ function Hero() {
         />
       </div>
       <div className="px-8 md:py-20 w-full relative flex flex-col-reverse items-center md:grid grid-cols-2">
-        <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center">
+        <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center z-50">
           <h1 className="text-gradient text-5xl lg:text-6xl font-bold leading-[140%]">
             Find Your Lost Pet with Ease in Warsaw!
           </h1>

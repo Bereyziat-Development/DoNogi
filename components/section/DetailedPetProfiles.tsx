@@ -5,14 +5,14 @@ function DetailPageProfiles() {
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 md:container mx-auto">
-        <div className="hidden md:block absolute w-[55%] -top-[15%] -right-[10%] aspect-square">
-          <Image
-            src="/images/shapes/PetProfileShapes.svg"
-            alt="logo"
-            fill={true}
-            className="object-right-top -z-[1]"
-          />
-        </div>
+        {/*<div className="hidden md:block absolute w-[55%] -top-[15%] -right-[10%] aspect-square">*/}
+        {/*  <Image*/}
+        {/*    src="/images/shapes/PetProfileShapes.svg"*/}
+        {/*    alt="logo"*/}
+        {/*    fill={true}*/}
+        {/*    className="object-right-top -z-[1]"*/}
+        {/*  />*/}
+        {/*</div>*/}
         <div className="block sm:hidden absolute inset-0 -mt-14">
           <Image
             src="/images/mobile/PetProfilePaws.svg"
