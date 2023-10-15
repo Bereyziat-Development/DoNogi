@@ -23,13 +23,40 @@ body {
 .btn-gradient {
   border-radius: 100px;
   background: var(--cta-gradient);
-  box-shadow: 4px 4px 26px 0 rgba(229, 144, 4, 0.70);
   color: white;
 }
 
+.box-shadow-gradient {
+  box-shadow: 4px 4px 26px 0 rgba(229, 144, 4, 0.70);
+}
+
 .text-gradient {
+  position: relative;
   background: var(--cta-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline; /* This will allow the text to flow inline and wrap */
+  color:transparent;
+  background:
+          var(--cta-gradient),
+          var(--cta-gradient)  bottom 2px left 0/100% 2px no-repeat; /* adjust the bottom value to control the offset */
+  background-clip: text,padding-box;
+  -webkit-background-clip: text,padding-box;
+}
+
+.text-gradient.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  background: var(--cta-gradient);
 }

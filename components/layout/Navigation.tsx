@@ -31,7 +31,7 @@ function Navigation() {
           />
         </div>
         <div className={`hidden ${isWebsitePublished && 'md:block'} relative`}>
-          <button className="btn-gradient px-6 py-3.5 font-semibold">
+          <button className="btn-gradient box-shadow-gradient px-6 py-3.5 font-semibold">
             Download Do Nogi app now!
           </button>
         </div>

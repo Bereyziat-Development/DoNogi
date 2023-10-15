@@ -37,11 +37,21 @@ function Hero() {
           </p>
           <div className="pt-4 md:pt-0">
             {isWebsitePublished ? (
-              <button className="btn-gradient px-6 py-3.5 font-semibold">
+              <button className="btn-gradient box-shadow-gradient px-6 py-3.5 font-semibold">
                 Download Do Nogi app now!
               </button>
             ) : (
-              <WaitingListForm showExtraTitle />
+              <WaitingListForm
+                inputWidth="w-full md:w-[380px]"
+                titleContent={
+                  <span className="w-full text-paragraph text-lg md:text-xl">
+                    <span className="gradient-text text-lg md:text-xl font-semibold">
+                      Do Nogi app is on its way.
+                    </span>{' '}
+                    Join our waiting list!
+                  </span>
+                }
+              />
             )}
           </div>
         </div>

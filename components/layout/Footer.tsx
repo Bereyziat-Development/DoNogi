@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import WaitingListForm from '@/components/WaitingListForm';
 
 function Footer() {
+  const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
   const currentYear = new Date().getFullYear();
 
   return (
@@ -49,30 +51,46 @@ function Footer() {
               className="object-contain"
             />
           </div>
-          <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-between gap-4 mt-10">
-            <Link
-              href="/"
-              className="relative w-full max-w-[211px] aspect-[3/1]"
-            >
-              <Image
-                src="/images/app-store.png"
-                alt="app store badge"
-                fill={true}
-                className="object-contain"
+          {isWebsitePublished ? (
+            <div className="w-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-between gap-4 mt-10">
+              <Link
+                href="/"
+                className="relative w-full max-w-[211px] aspect-[3/1]"
+              >
+                <Image
+                  src="/images/app-store.png"
+                  alt="app store badge"
+                  fill={true}
+                  className="object-contain"
+                />
+              </Link>
+              <Link
+                href="/"
+                className="relative w-full max-w-[211px] aspect-[3/1]"
+              >
+                <Image
+                  src="/images/google-play.png"
+                  alt="google play badge"
+                  fill={true}
+                  className="object-contain"
+                />
+              </Link>
+            </div>
+          ) : (
+            <div className="mt-10 px-6">
+              <WaitingListForm
+                inputWidth="w-full md:w-[362px]"
+                titleContent={
+                  <span className="w-full text-paragraph text-lg md:text-xl">
+                    <span className="gradient-text text-lg md:text-xl font-semibold">
+                      Do Nogi app is on its way.
+                    </span>{' '}
+                    Join our waiting list!
+                  </span>
+                }
               />
-            </Link>
-            <Link
-              href="/"
-              className="relative w-full max-w-[211px] aspect-[3/1]"
-            >
-              <Image
-                src="/images/google-play.png"
-                alt="google play badge"
-                fill={true}
-                className="object-contain"
-              />
-            </Link>
-          </div>
+            </div>
+          )}
           <span className="hidden md:block text-center mt-10 text-brown">
             © {currentYear} <b>Bereyziat Development</b>, All rights reserved.
           </span>

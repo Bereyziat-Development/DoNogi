@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import WaitingListForm from '@/components/WaitingListForm';
 
 function DownloadNow() {
+  const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
+
   return (
     <section className="my-20 mb-4 md:mb-40 sm:mt-0 md:container mx-auto pt-20 px-6 md:px-16">
       <div
@@ -48,30 +51,43 @@ function DownloadNow() {
             relief to countless families by reuniting them with their furry
             companions.
           </p>
-          <div className="w-full flex items-center justify-between gap-4 mt-10">
-            <Link
-              href="/"
-              className="relative w-full aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
-            >
-              <Image
-                src="/images/app-store.png"
-                alt="app store badge"
-                fill={true}
-                className="object-contain"
+          {isWebsitePublished ? (
+            <div className="w-full flex items-center justify-between gap-4 mt-10">
+              <Link
+                href="/"
+                className="relative w-full aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
+              >
+                <Image
+                  src="/images/app-store.png"
+                  alt="app store badge"
+                  fill={true}
+                  className="object-contain"
+                />
+              </Link>
+              <Link
+                href="/"
+                className="relative w-full max-w-[160px] aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
+              >
+                <Image
+                  src="/images/google-play.png"
+                  alt="google play badge"
+                  fill={true}
+                  className="object-contain"
+                />
+              </Link>
+            </div>
+          ) : (
+            <div className="mt-10">
+              <WaitingListForm
+                inputWidth="w-full md:w-[362px]"
+                titleContent={
+                  <span className="w-full text-paragraph text-lg md:text-xl">
+                    Join our waiting list!
+                  </span>
+                }
               />
-            </Link>
-            <Link
-              href="/"
-              className="relative w-full max-w-[160px] aspect-[3/1] md:max-w-[180px] xl:max-w-[211px]"
-            >
-              <Image
-                src="/images/google-play.png"
-                alt="google play badge"
-                fill={true}
-                className="object-contain"
-              />
-            </Link>
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
