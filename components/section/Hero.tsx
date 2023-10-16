@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import WaitingListForm from '@/components/WaitingListForm';
 import { PageTypes } from '@/@types/page-types';
 import Translation from '@/components/Translation';
@@ -7,6 +7,7 @@ import { useTranslation } from '@/app/i18n/client';
 
 function Hero(props: PageTypes['params']) {
   const { lng } = props;
+  const [waitingListInput, setWaitingListInput] = useState<string>('');
 
   const { t } = useTranslation(lng);
 
@@ -46,6 +47,11 @@ function Hero(props: PageTypes['params']) {
             ) : (
               <WaitingListForm
                 locale={lng}
+                inputValue={waitingListInput}
+                setInputValue={setWaitingListInput}
+                onChangeInput={(event) =>
+                  setWaitingListInput(event.target.value)
+                }
                 inputWidth="w-full md:w-[380px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">

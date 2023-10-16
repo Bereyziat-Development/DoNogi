@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Toaster } from 'react-hot-toast';
 
 const GTM_ID = 'GTM-WVHXQTW4';
 const GA_MEASUREMENT_ID = 'G-33EXQF2MF3';
@@ -48,6 +49,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning={true}>
         {children}
+        <Toaster position="top-right" reverseOrder={false} />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
