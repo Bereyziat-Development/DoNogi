@@ -1,21 +1,27 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function SearchFilter() {
+function SearchFilter(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 lg:container mx-auto">
         <div className="hidden md:block absolute w-[80%] -top-[37vw] -right-[17vw] aspect-square">
           <Image
-            src="/images/shapes/FiltersShapes.svg" 
+            src="/images/shapes/FiltersShapes.svg"
             alt="logo"
             fill={true}
-            className="object-top -z-[1]"
+            className="object-right-top -z-[1]"
           />
         </div>
-        <div className="block sm:hidden absolute w-full aspect-square -mt-4">
+        <div className="block sm:hidden absolute inset-0 -mt-4">
           <Image
-            src="/images/mobile/FiltersPaws.svg" 
+            src="/images/mobile/FiltersPaws.svg"
             alt="logo"
             fill={true}
             className="object-top -z-[1]"
@@ -24,15 +30,15 @@ function SearchFilter() {
         <div className="relative w-full flex flex-col-reverse sm:grid grid-cols-2 px-4">
           <div className="justify-self-end space-y-2 md:space-y-6 flex flex-col justify-center max-w-[559px]">
             <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
-              Enhanced Search Filters
+              {t('search_filter_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%] max-w-[650px]">
-              Thanks to our customizable search filters, find your pet faster based on specific criteria such as breed, size, color and location.
+              {t('search_filter_section.description')}
             </p>
           </div>
-          <div className="relative scale-125 sm:scale-100 aspect-square max-w-[600px] sm:left-[14%] xl:left-[100px] xl:top-[70px]">
+          <div className="relative aspect-square">
             <Image
-              src="/images/desktop/FiltersImage.png" 
+              src="/images/desktop/FiltersImage.png"
               alt="logo"
               fill={true}
               className="object-contain"
@@ -41,7 +47,7 @@ function SearchFilter() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default SearchFilter
+export default SearchFilter;

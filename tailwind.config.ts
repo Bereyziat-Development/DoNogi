@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -14,9 +14,9 @@ const config: Config = {
         paragraph: 'var(--paragraph)',
         yellow: 'var(--yellow)',
         brown: 'var(--brown)',
-      }
+      },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

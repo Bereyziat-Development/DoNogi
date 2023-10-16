@@ -1,0 +1,41 @@
+interface Resources {
+  "common": {
+    "buttons": {
+      "cta": "Download Do Nogi app now!"
+    },
+    "hero_section": {
+      "title": "Find Your Lost Pet with Ease in Warsaw!",
+      "description": "Welcome to our app designed to reunite pet owners with their beloved furry friends in the bustling city of Warsaw! We understand the heartbreak and worry that comes with losing a pet, which is why we&apos;ve created the app to make the search for lost pets quicker, easier, and more effective than ever before."
+    },
+    "rapid_alert_section": {
+      "title": "Rapid Alert System",
+      "description": "Our app helps find missing pets by alerting nearby pet lovers, increasing the chances of locating your lost companion quickly. Owners are also notified when a matching pet is found."
+    },
+    "detailed_pet_section": {
+      "title": "Detailed Pet Profiles",
+      "description": "Create your pet profile, including all relevant details to help others recognize your friend."
+    },
+    "localization_section": {
+      "title": "Localization",
+      "description": "Pinpoint the last known location of a lost pet. This feature enables users to track their pet's movements and narrow down search areas."
+    },
+    "search_filter_section": {
+      "title": "Enhanced Search Filters",
+      "description": "Thanks to our customizable search filters, find your pet faster based on specific criteria such as breed, size, color and location."
+    },
+    "friendly_interface_section": {
+      "title": "A Friendly Interface",
+      "description": "DoNogi is intuitive and easy to use, even for those who may not be tech-savvy. Whether you're a pet owner or someone who wants to lend a helping hand, we guarantee a seamless experience for everyone involved."
+    },
+    "download_now_section": {
+      "title": "Download Now!",
+      "description": "Join our community of pet lovers in Warsaw, and help bring joy and relief to countless families by reuniting them with their furry companions."
+    },
+    "footer_section": {
+      "all_rights_reserved": "All rights reserved.",
+      "follow_us": "Follow us <br />on social media"
+    }
+  }
+}
+
+export default Resources;
