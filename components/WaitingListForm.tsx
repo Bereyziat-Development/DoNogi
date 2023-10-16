@@ -3,26 +3,17 @@ import toast from 'react-hot-toast';
 
 import { LanguageUnion } from '@/@types/page-types';
 import { useTranslation } from '@/app/i18n/client';
-import { set } from 'zod';
 
 interface WaitingListFormProps {
   inputWidth: string;
   locale: LanguageUnion;
   inputValue: string;
   setInputValue: React.Dispatch<React.SetStateAction<string>>;
-  onChangeInput: (event: React.ChangeEvent<HTMLInputElement>) => void;
   titleContent: React.ReactNode;
 }
 
 export default function WaitingListForm(props: WaitingListFormProps) {
-  const {
-    titleContent,
-    inputWidth,
-    locale,
-    inputValue,
-    onChangeInput,
-    setInputValue,
-  } = props;
+  const { titleContent, inputWidth, locale, inputValue, setInputValue } = props;
 
   const { t } = useTranslation(locale);
 
@@ -81,7 +72,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
         <input
           value={inputValue}
           onChange={(event) => {
-            onChangeInput(event);
+            setInputValue(event.target.value);
             setError('');
           }}
           placeholder="Enter your email here"
