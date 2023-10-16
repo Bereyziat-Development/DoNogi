@@ -91,9 +91,6 @@ function Footer(props: PageTypes['params']) {
                 locale={lng}
                 inputValue={waitingListInput}
                 setInputValue={setWaitingListInput}
-                onChangeInput={(event) =>
-                  setWaitingListInput(event.target.value)
-                }
                 inputWidth="w-full md:w-[362px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">
