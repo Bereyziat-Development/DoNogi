@@ -45,7 +45,7 @@ function Hero() {
                 inputWidth="w-full md:w-[380px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">
-                    <span className="gradient-text text-lg md:text-xl font-semibold">
+                    <span className="text-gradient text-lg md:text-xl font-semibold">
                       Do Nogi app is on its way.
                     </span>{' '}
                     Join our waiting list!

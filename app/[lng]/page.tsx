@@ -12,13 +12,14 @@ import RapidAlertSystem from '@/components/section/RapidAlertSystem';
 import SearchFilter from '@/components/section/SearchFilter';
 import Image from 'next/image';
 import { PageTypes } from '@/@types/page-types';
-
-// TODO: Hero, Detailed Pet, Enhanced Search Filters shapes
+import { useTranslation } from '@/app/i18n/client';
 
 export default function Home(props: PageTypes) {
   const {
     params: { lng },
   } = props;
+
+  const { t } = useTranslation(lng);
 
   return (
     <div className="w-full">

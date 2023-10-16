@@ -9,7 +9,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
   const { titleContent, inputWidth } = props;
 
   return (
-    <form className="flex flex-col flex-shrink gap-2">
+    <form className="flex flex-col flex-shrink gap-2.5">
       {titleContent}
 
       <div className="w-full flex flex-row">
@@ -17,7 +17,10 @@ export default function WaitingListForm(props: WaitingListFormProps) {
           placeholder="Enter your email here"
           className={`${inputWidth} border-2 rounded-l-2xl border-r-0 border-amber-500 px-3 py-4`}
         />
-        <button className="btn-gradient px-4 py-4 !rounded-l-2xl -translate-x-1.5 font-semibold whitespace-nowrap">
+        <button
+          type="submit"
+          className="btn-gradient px-4 py-4 !rounded-l-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
+        >
           Notify me!
         </button>
       </div>

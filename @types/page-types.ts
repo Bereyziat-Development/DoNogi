@@ -1,5 +1,7 @@
 export interface PageTypes {
   params: {
-    lng: 'en' | 'pl';
+    lng: LanguageUnion;
   };
 }
+
+export type LanguageUnion = 'en' | 'pl';

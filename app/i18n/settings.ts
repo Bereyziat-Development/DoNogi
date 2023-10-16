@@ -1,6 +1,6 @@
 export const fallbackLng = 'pl';
 export const languages = [fallbackLng, 'en'];
-export const defaultNS = 'translation';
+export const defaultNS = 'translations';
 export const cookieName = 'i18next';
 
 export function getOptions(
@@ -8,16 +8,13 @@ export function getOptions(
   ns: string | string[] = defaultNS,
 ) {
   return {
-    // debug: true,
+    debug: true,
     supportedLngs: languages,
-    // preload: languages,
+    preload: languages,
     fallbackLng,
     lng,
     fallbackNS: defaultNS,
     defaultNS,
     ns,
-    // backend: {
-    //   projectId: '01b2e5e8-6243-47d1-b36f-963dbb8bcae3'
-    // }
   };
 }
