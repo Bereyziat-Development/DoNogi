@@ -1,6 +1,7 @@
 {
   "buttons": {
-    "cta": "Download Do Nogi app now!"
+    "cta": "Download Do Nogi app now!",
+    "notify_me": "Notify me!"
   },
   "hero_section": {
     "title": "Find Your Lost Pet with Ease in Warsaw!",
@@ -34,5 +35,7 @@
     "all_rights_reserved": "All rights reserved.",
     "follow_us": "Follow us <br />on social media"
   },
-  "join_waiting_list": "Interested? Join waiting list!"
+  "join_waiting_list": "Join our waiting list!",
+  "donogi_on_its_way": "Do Nogi app is on its way.",
+  "interested_join_waiting_list": "Interested? Join our waiting list!"
 }

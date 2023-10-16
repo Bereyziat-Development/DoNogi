@@ -12,20 +12,17 @@ import RapidAlertSystem from '@/components/section/RapidAlertSystem';
 import SearchFilter from '@/components/section/SearchFilter';
 import Image from 'next/image';
 import { PageTypes } from '@/@types/page-types';
-import { useTranslation } from '@/app/i18n/client';
 
 export default function Home(props: PageTypes) {
   const {
     params: { lng },
   } = props;
 
-  const { t } = useTranslation(lng);
-
   return (
     <div className="w-full">
-      <DownloadNowFixed />
+      <DownloadNowFixed lng={lng} />
       <Navigation />
-      <Hero />
+      <Hero lng={lng} />
       <div className="relative">
         <div className="hidden sm:block absolute w-full h-full -top-[5%]">
           <Image
@@ -36,15 +33,15 @@ export default function Home(props: PageTypes) {
           />
         </div>
         <div className="-mt-6 xl:-mt-48">
-          <RapidAlertSystem />
-          <DetailPageProfiles />
-          <Localisation />
-          <SearchFilter />
-          <FriendlyInterface />
-          <DownloadNow />
+          <RapidAlertSystem lng={lng} />
+          <DetailPageProfiles lng={lng} />
+          <Localisation lng={lng} />
+          <SearchFilter lng={lng} />
+          <FriendlyInterface lng={lng} />
+          <DownloadNow lng={lng} />
         </div>
       </div>
-      <Footer />
+      <Footer lng={lng} />
     </div>
   );
 }

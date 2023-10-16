@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function DetailPageProfiles() {
+function DetailPageProfiles(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 md:container mx-auto">
@@ -24,11 +30,10 @@ function DetailPageProfiles() {
         <div className="relative w-full flex flex-col-reverse gap-y-10 sm:grid grid-cols-2 px-4">
           <div className="justify-self-end space-y-2 md:space-y-6 flex flex-col justify-center max-w-[559px]">
             <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
-              Detailed Pet Profiles
+              {t('detailed_pet_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Create your pet profile, including all relevant details to help
-              others recognize your friend.
+              {t('detailed_pet_section.description')}
             </p>
           </div>
           <div className="relative aspect-square">

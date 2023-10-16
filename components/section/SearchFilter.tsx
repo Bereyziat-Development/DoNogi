@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function SearchFilter() {
+function SearchFilter(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 lg:container mx-auto">
@@ -24,12 +30,10 @@ function SearchFilter() {
         <div className="relative w-full flex flex-col-reverse sm:grid grid-cols-2 px-4">
           <div className="justify-self-end space-y-2 md:space-y-6 flex flex-col justify-center max-w-[559px]">
             <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
-              Enhanced Search Filters
+              {t('search_filter_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%] max-w-[650px]">
-              Thanks to our customizable search filters, find your pet faster
-              based on specific criteria such as breed, size, color and
-              location.
+              {t('search_filter_section.description')}
             </p>
           </div>
           <div className="relative aspect-square">

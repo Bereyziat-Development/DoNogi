@@ -2,8 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import WaitingListForm from '@/components/WaitingListForm';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
+import Translation from '@/components/Translation';
 
-function Footer() {
+function Footer(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
   const currentYear = new Date().getFullYear();
 
@@ -79,26 +86,27 @@ function Footer() {
           ) : (
             <div className="mt-10 px-6">
               <WaitingListForm
+                locale={lng}
                 inputWidth="w-full md:w-[362px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">
                     <span className="gradient-text text-lg md:text-xl font-semibold">
-                      Do Nogi app is on its way.
+                      {t('donogi_on_its_way')}
                     </span>{' '}
-                    Join our waiting list!
+                    {t('join_waiting_list')}
                   </span>
                 }
               />
             </div>
           )}
           <span className="hidden md:block text-center mt-10 text-brown">
-            © {currentYear} <b>Bereyziat Development</b>, All rights reserved.
+            © {currentYear} <b>Bereyziat Development</b>,{' '}
+            {t('footer_section.all_rights_reserved')}
           </span>
         </div>
         <div className="w-full flex flex-col justify-end lg:justify-center mt-10 md:mt-0">
           <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown md:text-sm lg:text-xl whitespace-nowrap">
-            Follow us <br />
-            on social media
+            <Translation text="footer_section.follow_us" locales={lng} />
           </h3>
           <div className="flex flex-row gap-8 md:gap-14 xl:grid items-center xl:grid-cols-3 xl:gap-4 mt-10 max-w-[375px] mx-auto">
             <Link
@@ -167,7 +175,7 @@ function Footer() {
           <span className="block md:hidden text-center text-brown mb-14">
             © {currentYear} <b className="underline">Bereyziat Development</b>,
             <br />
-            All rights reserved.
+            {t('footer_section.all_rights_reserved')}
           </span>
         </div>
       </div>

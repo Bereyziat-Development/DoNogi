@@ -4,8 +4,14 @@ import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import useScrollDirectionToUp from '@/hooks/useScrollDirectionToUp';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function DownloadNowFixed() {
+function DownloadNowFixed(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
 
   const [closeDisplay, setCloseDisplay] = useState(false);
@@ -72,7 +78,7 @@ function DownloadNowFixed() {
           </svg>
         </button>
         <h1 className="text-xl text-brown tracking-[8px] text-center">
-          Download Now!
+          {t('download_now_section.title')}
         </h1>
         <div className="w-full flex items-center justify-between gap-4 mt-4">
           <Link href="/" className="relative w-full max-w-[211px] aspect-[3/1]">

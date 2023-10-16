@@ -2,8 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import WaitingListForm from '@/components/WaitingListForm';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function DownloadNow() {
+function DownloadNow(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
 
   return (
@@ -44,12 +50,10 @@ function DownloadNow() {
 
         <div className="relative md:max-w-[405px] xl:max-w-[505px] mx-auto px-2 sm:px-10 md:px-0 mt-10 lg:mt-0 xl:mr-[22rem]">
           <h1 className="text-gradient font-bold text-4xl sm:text-5xl xl:text-6xl text-center md:text-left whitespace-nowrap">
-            Download Now!
+            {t('download_now_section.title')}
           </h1>
           <p className="text-lg md:text-xl leading-[150%] mt-8 text-secondary">
-            Join our community of pet lovers in Warsaw, and help bring joy and
-            relief to countless families by reuniting them with their furry
-            companions.
+            {t('download_now_section.description')}
           </p>
           {isWebsitePublished ? (
             <div className="w-full flex items-center justify-between gap-4 mt-10">
@@ -79,10 +83,11 @@ function DownloadNow() {
           ) : (
             <div className="mt-10">
               <WaitingListForm
+                locale={lng}
                 inputWidth="w-full md:w-[362px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">
-                    Join our waiting list!
+                    {t('join_waiting_list')}
                   </span>
                 }
               />

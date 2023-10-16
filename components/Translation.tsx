@@ -1,10 +1,12 @@
 import React from 'react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from '@/app/i18n/client';
+import { LanguageUnion } from '@/@types/page-types';
 
 type TranslationProps = {
   text: string;
   options?: any;
-  translationFileKeys: string | string[];
+  translationFileKeys?: string;
+  locales: LanguageUnion;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export default function Translation({
@@ -12,9 +14,10 @@ export default function Translation({
   className,
   options,
   translationFileKeys,
+  locales,
   ...props
 }: TranslationProps) {
-  const { t } = useTranslation(translationFileKeys);
+  const { t } = useTranslation(locales, translationFileKeys);
   return (
     <span
       {...props}

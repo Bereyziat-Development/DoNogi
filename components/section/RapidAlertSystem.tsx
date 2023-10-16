@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function RapidAlertSystem() {
+function RapidAlertSystem(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="md:container mx-auto">
@@ -40,12 +46,10 @@ function RapidAlertSystem() {
           </div>
           <div className="-mt-20 space-y-2 md:space-y-6 px-4 flex flex-col justify-center max-w-[559px]">
             <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
-              Rapid Alert System
+              {t('rapid_alert_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Our app helps find missing pets by alerting nearby pet lovers,
-              increasing the chances of locating your lost companion quickly.
-              Owners are also notified when a matching pet is found.
+              {t('rapid_alert_section.description')}
             </p>
           </div>
         </div>

@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 import WaitingListForm from '@/components/WaitingListForm';
+import { PageTypes } from '@/@types/page-types';
+import Translation from '@/components/Translation';
+import { useTranslation } from '@/app/i18n/client';
 
-function Hero() {
+function Hero(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
 
   return (
@@ -26,29 +33,26 @@ function Hero() {
       <div className="px-8 md:py-20 w-full relative flex flex-col-reverse items-center md:grid grid-cols-2">
         <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center z-50">
           <h1 className="text-gradient text-5xl lg:text-6xl font-bold leading-[140%]">
-            Find Your Lost Pet with Ease in Warsaw!
+            <Translation locales={lng} text="hero_section.title" />
           </h1>
           <p className="text-paragraph text-lg md:text-xl leading-[150%]">
-            Welcome to our app designed to reunite pet owners with their beloved
-            furry friends in the bustling city of Warsaw! We understand the
-            heartbreak and worry that comes with losing a pet, which is why
-            we&apos;ve created the app to make the search for lost pets quicker,
-            easier, and more effective than ever before.
+            <Translation locales={lng} text="hero_section.description" />
           </p>
           <div className="pt-4 md:pt-0">
             {isWebsitePublished ? (
               <button className="btn-gradient box-shadow-gradient px-6 py-3.5 font-semibold">
-                Download Do Nogi app now!
+                {t('buttons.cta')}
               </button>
             ) : (
               <WaitingListForm
+                locale={lng}
                 inputWidth="w-full md:w-[380px]"
                 titleContent={
                   <span className="w-full text-paragraph text-lg md:text-xl">
                     <span className="text-gradient text-lg md:text-xl font-semibold">
-                      Do Nogi app is on its way.
+                      {t('donogi_on_its_way')}
                     </span>{' '}
-                    Join our waiting list!
+                    {t('join_waiting_list')}
                   </span>
                 }
               />

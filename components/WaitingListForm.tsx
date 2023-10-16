@@ -1,12 +1,17 @@
 import React from 'react';
+import { LanguageUnion } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
 interface WaitingListFormProps {
   inputWidth: string;
+  locale: LanguageUnion;
   titleContent: React.ReactNode;
 }
 
 export default function WaitingListForm(props: WaitingListFormProps) {
-  const { titleContent, inputWidth } = props;
+  const { titleContent, inputWidth, locale } = props;
+
+  const { t } = useTranslation(locale);
 
   return (
     <form className="flex flex-col flex-shrink gap-2.5">
@@ -21,7 +26,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
           type="submit"
           className="btn-gradient px-4 py-4 !rounded-l-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
         >
-          Notify me!
+          {t('buttons.notify_me')}
         </button>
       </div>
     </form>

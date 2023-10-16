@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
+import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
 
-function Localisation() {
+function Localisation(props: PageTypes['params']) {
+  const { lng } = props;
+
+  const { t } = useTranslation(lng);
+
   return (
     <section className="relative mt-24 md:mt-0">
       <div className="px-4 md:container mx-auto">
@@ -32,12 +38,10 @@ function Localisation() {
           </div>
           <div className="sm:-mt-32 space-y-2 md:space-y-6 sm:px-4 flex flex-col justify-center max-w-[559px] z-10">
             <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
-              Localisation
+              {t('localization_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">
-              Pinpoint the last known location of a lost pet. This feature
-              enables users to track their pet&apos;s movements and narrow down
-              search areas.
+              {t('localization_section.description')}
             </p>
           </div>
         </div>
