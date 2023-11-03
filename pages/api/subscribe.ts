@@ -20,7 +20,7 @@ export default async function waitingListHandler(
           email: email,
         },
       });
-      return res.status(200).json(contact);
+      return res.status(200);
     } catch (error) {
       if (error instanceof Error) {
         const prismaError: { code?: string; meta?: { target?: string[] } } =
