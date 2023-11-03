@@ -11,6 +11,7 @@
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|tsx)\" --write",
     "precommit:lint": "npm run lint:fix && npm run format",
     "clean": "rimraf .next",
+    "postinstall": "prisma generate",
     "nuke:install": "rimraf ./node_modules ./package-lock.json",
     "toc": "i18next-resources-for-ts toc -i app/i18n/locales/en -o ./@types/resources.ts",
     "merge": "i18next-resources-for-ts merge -i app/i18n/locales/en -o ./@types/resources.json",
