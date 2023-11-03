@@ -61,11 +61,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
   };
 
   return (
-    <form
-      method="POST"
-      onSubmit={handleSubmit}
-      className="flex flex-col flex-shrink gap-2.5"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col flex-shrink gap-2.5">
       {titleContent}
 
       <div className="w-full flex flex-row">

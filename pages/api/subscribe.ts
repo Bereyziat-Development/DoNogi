@@ -39,6 +39,6 @@ export default async function waitingListHandler(
       return res.status(500).json({ error: 'An unexpected error occurred.' });
     }
   } else {
-    res.status(405).end();
+    res.status(405).json({ error: 'Method is not allowed' });
   }
 }
