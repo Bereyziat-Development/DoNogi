@@ -17,18 +17,15 @@ export default function WaitingListForm(props: WaitingListFormProps) {
 
   const { t } = useTranslation(locale);
 
-  // State to handle errors.
   const [error, setError] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent default form submission.
+    e.preventDefault();
 
-    if (
-      !inputValue ||
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(inputValue)
-    ) {
-      toast.error('Email is invalid!');
-      setError('Email is invalid');
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(inputValue)) {
+      const errorMessage = t('errors.invalid_email') || 'Email is invalid!';
+      toast.error(errorMessage);
+      setError(errorMessage);
       return;
     }
 
@@ -43,30 +40,39 @@ export default function WaitingListForm(props: WaitingListFormProps) {
 
       if (!response.ok) {
         const data = await response.json();
-        toast.error(data.error || 'An unexpected error occurred.');
-        setError(data.error || 'An unexpected error occurred.');
+        console.error(data); // log the error for debugging purposes
+        const errorMessage =
+          data.error ||
+          t('errors.unexpected_error') ||
+          'An unexpected error occurred.';
+        toast.error(errorMessage);
+        setError(errorMessage);
         return;
       }
 
-      // Handle success. For example, you can reset the input or show a success message.
+      // Handle success
       setInputValue('');
       toast.success('You are on the waiting list!');
+      setError('');
     } catch (err) {
-      setError('An unexpected error occurred.');
-      setTimeout(() => setError(''), 1200);
+      console.error(err); // log the error for debugging purposes
+      const errorMessage =
+        t('errors.unexpected_error') || 'An unexpected error occurred.';
+      toast.error(errorMessage);
+      setError(errorMessage);
+      setTimeout(() => setError(''), 5000);
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col flex-shrink gap-2.5">
       {titleContent}
-
       <div className="w-full flex flex-row">
         <input
           value={inputValue}
           onChange={(event) => {
             setInputValue(event.target.value);
-            setError('');
+            if (error) setError('');
           }}
           placeholder="Enter your email here"
           className={`${inputWidth} border-2 rounded-l-2xl border-r-0 ${
@@ -75,11 +81,12 @@ export default function WaitingListForm(props: WaitingListFormProps) {
         />
         <button
           type="submit"
-          className="btn-gradient px-4 py-4 !rounded-l-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
+          className="btn-gradient px-4 py-4 !rounded-l-none rounded-r-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
         >
           {t('buttons.notify_me')}
         </button>
       </div>
+      {error && <p className="text-red-500">{error}</p>}
     </form>
   );
 }

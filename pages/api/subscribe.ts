@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import prisma from '@/lib/prisma';
+
+export const maxDuration = 300;
 
 export default async function waitingListHandler(
   req: NextApiRequest,
@@ -20,7 +21,8 @@ export default async function waitingListHandler(
           email: email,
         },
       });
-      return res.status(200);
+
+      return res.status(200).json({ message: 'Email added successfully.' });
     } catch (error) {
       if (error instanceof Error) {
         const prismaError: { code?: string; meta?: { target?: string[] } } =
