@@ -33,16 +33,13 @@ export default function WaitingListForm(props: WaitingListFormProps) {
     }
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/subscribe`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email: inputValue }),
+      const response = await fetch(`${window.location.origin}/api/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      );
+        body: JSON.stringify({ email: inputValue }),
+      });
 
       if (!response.ok) {
         const data = await response.json();
