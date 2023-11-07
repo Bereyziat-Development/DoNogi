@@ -30,7 +30,9 @@ i18next
     ...getOptions(),
     lng: 'pl',
     detection: {
-      order: ['path', 'htmlTag', 'cookie', 'navigator'],
+      order: ['navigator', 'path', 'cookie', 'htmlTag'],
+      lookupCookie: cookieName,
+      caches: ['cookie'],
     },
     preload: runsOnServerSide ? languages : [],
   });

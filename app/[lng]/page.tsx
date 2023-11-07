@@ -12,11 +12,52 @@ import RapidAlertSystem from '@/components/section/RapidAlertSystem';
 import SearchFilter from '@/components/section/SearchFilter';
 import Image from 'next/image';
 import { PageTypes } from '@/@types/page-types';
+import { useTranslation } from '@/app/i18n/client';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Home(props: PageTypes) {
   const {
     params: { lng },
   } = props;
+
+  const { i18n } = useTranslation(lng);
+  const router = useRouter();
+
+  useEffect(() => {
+    function getDefaultLanguage() {
+      // Check if the browser has a list of preferred languages
+      if (
+        Array.isArray(window.navigator.languages) &&
+        window.navigator.languages.length
+      ) {
+        // Find if the user's browser preferences include English or Polish
+        const preferredLanguage = window.navigator.languages.find(
+          (lang) => lang.startsWith('en') || lang.startsWith('pl'),
+        );
+        // If English or Polish is found, return the first two characters (language code)
+        // Otherwise, default to Polish
+        return preferredLanguage ? preferredLanguage.split('-')[0] : 'pl';
+      }
+      // If window.navigator.languages is not available, check the browser's primary language
+      const browserLanguage = window.navigator.language;
+      // Return the language code if it's English or Polish, default to Polish otherwise
+      return browserLanguage.startsWith('en') ||
+        browserLanguage.startsWith('pl')
+        ? browserLanguage.split('-')[0]
+        : 'pl';
+    }
+
+    const defaultLanguage = getDefaultLanguage();
+
+    console.log(defaultLanguage);
+    if (i18n.language !== defaultLanguage) {
+      i18n.changeLanguage(defaultLanguage); // Change the i18n language to the detected or default language
+      router.push(`/${defaultLanguage}`); // Redirect to the correct locale
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="w-full">
