@@ -109,7 +109,7 @@ function Footer(props: PageTypes['params']) {
           </span>
         </div>
         <div className="w-full flex flex-col justify-end lg:justify-center mt-10 md:mt-0">
-          <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown md:text-sm lg:text-xl whitespace-nowrap">
+          <h3 className="text-center leading-[200%] mx-auto tracking-[8px] text-brown md:text-sm lg:text-xl">
             <Translation text="footer_section.follow_us" locales={lng} />
           </h3>
           <div className="flex flex-row gap-8 md:gap-14 xl:grid items-center xl:grid-cols-3 xl:gap-4 mt-10 max-w-[375px] mx-auto">
