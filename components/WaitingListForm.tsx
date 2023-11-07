@@ -40,7 +40,6 @@ export default function WaitingListForm(props: WaitingListFormProps) {
 
       if (!response.ok) {
         const data = await response.json();
-        console.error(data); // log the error for debugging purposes
         const errorMessage =
           data.error ||
           t('errors.unexpected_error') ||
@@ -50,12 +49,10 @@ export default function WaitingListForm(props: WaitingListFormProps) {
         return;
       }
 
-      // Handle success
       setInputValue('');
       toast.success('You are on the waiting list!');
       setError('');
     } catch (err) {
-      console.error(err); // log the error for debugging purposes
       const errorMessage =
         t('errors.unexpected_error') || 'An unexpected error occurred.';
       toast.error(errorMessage);

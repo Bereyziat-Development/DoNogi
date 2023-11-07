@@ -1,41 +1,41 @@
 {
-  "buttons": {
-    "cta": "Download Do Nogi app now!",
-    "notify_me": "Notify me!"
+  "buttons":{
+    "cta":"Pobierz apkę Do Nogi!",
+    "notify_me":"Wyślij mi powiadomienie!"
   },
-  "hero_section": {
-    "title": "Find Your Lost Pet with Ease in Warsaw!",
-    "description": "Welcome to our app designed to reunite pet owners with their beloved furry friends in the bustling city of Warsaw! We understand the heartbreak and worry that comes with losing a pet, which is why we&apos;ve created the app to make the search for lost pets quicker, easier, and more effective than ever before."
+  "hero_section":{
+    "title":"Znajdź swojego zagubionego zwierzaka w Warszawie!",
+    "description":"Nasza aplikacja ma na celu ułatwienie właścicielom poszukiwań ich futrzanych przyjaciół w tętniącej życiem stolicy! Dobrze rozumiemy ból i stres związany ze zgubą zwierzaka, dlatego stworzyliśmy aplikację, dzięki której poszukiwania staną się szybsze, łatwiejsze i przede wszystkim skuteczne!"
   },
-  "rapid_alert_section": {
-    "title": "Rapid Alert System",
-    "description": "Our app helps find missing pets by alerting nearby pet lovers, increasing the chances of locating your lost companion quickly. Owners are also notified when a matching pet is found."
+  "rapid_alert_section":{
+    "title":"System Alertów",
+    "description":"Nasza aplikacja pomaga znaleźć zaginione zwierzaki, wysyłając alerty do wszystkich miłośników zwierząt w okolicy, zwiększając szanse na szybkie zlokalizowanie zagubionego futrzaka. Właściciele są również powiadamiani o znalezieniu zwierzęcia o pasujących kryteriach wyglądu."
   },
-  "detailed_pet_section": {
-    "title": "Detailed Pet Profiles",
-    "description": "Create your pet profile, including all relevant details to help others recognize your friend."
+  "detailed_pet_section":{
+    "title":"Szczegółowe Profile Zwierząt",
+    "description":"Utwórz profil swojego zwierzaka, zawierający wszystkie istotne szczegóły, aby pomóc innym szybko rozpoznać Twojego przyjaciela."
   },
-  "localization_section": {
-    "title": "Localization",
-    "description": "Pinpoint the last known location of a lost pet. This feature enables users to track their pet's movements and narrow down search areas."
+  "localization_section":{
+    "title":"Lokalizacja",
+    "description":"Oznacz pinezką ostatnią znaną lokalizację zwierzaka. Ta funkcja umożliwia użytkownikom śledzenie ruchów zwierzęcia i zawężanie obszarów wyszukiwania."
   },
-  "search_filter_section": {
-    "title": "Enhanced Search Filters",
-    "description": "Thanks to our customizable search filters, find your pet faster based on specific criteria such as breed, size, color and location."
+  "search_filter_section":{
+    "title":"Ulepszone Filtry Wyszukiwania",
+    "description":"Dzięki naszym filtrom wyszukiwania możesz szybciej znaleźć swojego zwierzaka na podstawie określonych kryteriów, takich jak rasa, rozmiar, kolor i lokalizacja."
   },
-  "friendly_interface_section": {
-    "title": "A Friendly Interface",
-    "description": "DoNogi is intuitive and easy to use, even for those who may not be tech-savvy. Whether you're a pet owner or someone who wants to lend a helping hand, we guarantee a seamless experience for everyone involved."
+  "friendly_interface_section":{
+    "title":"Przyjazny Interfejs",
+    "description":"DoNogi jest intuicyjną i łatwą w użyciu apką, nawet dla tych nieobeznanych z technologią. Nieważne, czy jesteś właścicielem zwierzęcia, czy osobą, która chce pomóc w poszukiwaniach, gwarantujemy, że nasza aplikacja nie przysporzy Ci problemów w obsłudze."
   },
-  "download_now_section": {
-    "title": "Download Now!",
-    "description": "Join our community of pet lovers in Warsaw, and help bring joy and relief to countless families by reuniting them with their furry companions."
+  "download_now_section":{
+    "title":"Pobierz Teraz!",
+    "description":"Dołącz do naszej społeczności miłośników zwierząt w Warszawie i pomóż przynieść ulgę i szczęście ludziom oraz ich najdroższym pupilom!"
   },
-  "footer_section": {
-    "all_rights_reserved": "All rights reserved.",
-    "follow_us": "Follow us <br />on social media"
+  "footer_section":{
+    "all_rights_reserved":"Wszelkie prawa zastrzeżone.",
+    "follow_us":"Zaobserwuj nas <br />na naszych social mediach"
   },
-  "join_waiting_list": "Join our waiting list!",
-  "donogi_on_its_way": "Do Nogi app is on its way.",
-  "interested_join_waiting_list": "Interested? Join our waiting list!"
+  "join_waiting_list":"Zasubskrybuj nas!",
+  "donogi_on_its_way":"Do Nogi nadchodzi",
+  "interested_join_waiting_list":"Zainteresowaliśmy Cię? Dołącz do naszej listy oczekujących!"
 }

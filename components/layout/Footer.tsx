@@ -42,12 +42,12 @@ function Footer(props: PageTypes['params']) {
       </div>
       <div className="relative lg:container mx-auto md:grid grid-cols-3 gap-12 md:px-16">
         <div className="hidden w-full md:flex flex-col justify-end lg:justify-center">
-          <div className="relative xl:w-[347px] aspect-square">
+          <div className="relative w-full h-[347px]">
             <Image
-              src="/images/qrcode.png"
+              src="/images/mobile/FooterDog.png"
               alt="phone mockup"
               fill={true}
-              className="object-contain"
+              className="absolute object-cover object-center"
             />
           </div>
         </div>
@@ -163,12 +163,12 @@ function Footer(props: PageTypes['params']) {
             </Link>
           </div>
           <div className="block md:hidden relative w-full sm:max-w-[197px] aspect-square mt-10 mb-5">
-            <Image
-              src="/images/qrcode.png"
-              alt="phone mockup"
-              fill={true}
-              className="object-contain hidden sm:block"
-            />
+            {/*<Image*/}
+            {/*  src="/images/qrcode.png"*/}
+            {/*  alt="phone mockup"*/}
+            {/*  fill={true}*/}
+            {/*  className="object-contain hidden sm:block"*/}
+            {/*/>*/}
             <Image
               src="/images/mobile/FooterDog.png"
               alt="phone mockup"

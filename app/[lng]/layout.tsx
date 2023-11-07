@@ -2,6 +2,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
+import { languages } from '@/app/i18n/settings';
+import { PageTypes } from '@/@types/page-types';
+import { dir } from 'i18next';
 
 const GTM_ID = 'GTM-WVHXQTW4';
 const GA_MEASUREMENT_ID = 'G-33EXQF2MF3';
@@ -11,13 +14,18 @@ export const metadata: Metadata = {
   description: 'Find Your Lost Pet with Ease in Warsaw!',
 };
 
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
 export default function RootLayout({
   children,
+  params: { lng },
 }: {
   children: React.ReactNode;
-}) {
+} & PageTypes) {
   return (
-    <html lang="en">
+    <html lang={lng} dir={dir(lng)}>
       {/* Google Tag Manager Script */}
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
