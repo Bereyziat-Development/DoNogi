@@ -41,13 +41,13 @@ function Footer(props: PageTypes['params']) {
         />
       </div>
       <div className="relative lg:container mx-auto md:grid grid-cols-3 gap-12 md:px-16">
-        <div className="hidden w-full md:flex flex-col justify-end lg:justify-center">
-          <div className="relative w-full h-[347px]">
+        <div className="hidden w-full md:flex flex-col justify-end lg:justify-center -translate-x-[10rem]">
+          <div className="relative w-[500px] h-[347px]">
             <Image
-              src="/images/mobile/FooterDog.png"
+              src="/images/mobile/FooterDogQR.png"
               alt="phone mockup"
               fill={true}
-              className="absolute object-cover object-center"
+              className="absolute object-contain object-center"
             />
           </div>
         </div>
