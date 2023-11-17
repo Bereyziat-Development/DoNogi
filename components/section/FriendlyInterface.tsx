@@ -37,7 +37,7 @@ function FriendlyInterface(props: PageTypes['params']) {
             />
           </div>
           <div className="-mt-10 md:-mt-20 space-y-2 md:space-y-6 px-4 flex flex-col justify-center max-w-[500px] md:max-w-[559px]">
-            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
+            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%] z-50">
               {t('friendly_interface_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">

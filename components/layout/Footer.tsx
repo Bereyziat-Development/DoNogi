@@ -113,8 +113,10 @@ function Footer(props: PageTypes['params']) {
             <Translation text="footer_section.follow_us" locales={lng} />
           </h3>
           <div className="flex flex-row gap-8 md:gap-14 xl:grid items-center xl:grid-cols-3 xl:gap-4 mt-10 max-w-[375px] mx-auto">
-            <Link
-              href="/"
+            <a
+              target="_blank"
+              href="https://www.facebook.com/donogiapp"
+              rel="noopener noreferrer"
               className="text-center text-brown flex flex-col items-center gap-4"
             >
               <div className="max-w-[30px] lg:max-w-[64px] relative w-full aspect-square group">
@@ -132,7 +134,7 @@ function Footer(props: PageTypes['params']) {
                 />
               </div>
               <span className="whitespace-nowrap">Do Nogi</span>
-            </Link>
+            </a>
             <div className="hidden xl:block relative w-full aspect-square">
               <Image
                 src="/images/desktop/FooterWhitePaw.svg"
@@ -141,8 +143,10 @@ function Footer(props: PageTypes['params']) {
                 className="object-contain"
               />
             </div>
-            <Link
-              href="/"
+            <a
+              target="_blank"
+              href="https://www.instagram.com/donogi.app"
+              rel="noopener noreferrer"
               className="text-center text-brown flex flex-col items-center gap-4"
             >
               <div className="max-w-[30px] lg:max-w-[64px] relative w-full aspect-square group">
@@ -160,7 +164,7 @@ function Footer(props: PageTypes['params']) {
                 />
               </div>
               <span>@donogi.app</span>
-            </Link>
+            </a>
           </div>
           <div className="block md:hidden relative w-full sm:max-w-[197px] aspect-square mt-10 mb-5">
             {/*<Image*/}

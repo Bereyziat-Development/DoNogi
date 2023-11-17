@@ -48,9 +48,8 @@ export default function Home(props: PageTypes) {
         : 'pl';
     }
 
-    const defaultLanguage = getDefaultLanguage();
+    const defaultLanguage = 'pl';
 
-    console.log(defaultLanguage);
     if (i18n.language !== defaultLanguage) {
       i18n.changeLanguage(defaultLanguage); // Change the i18n language to the detected or default language
       router.push(`/${defaultLanguage}`); // Redirect to the correct locale

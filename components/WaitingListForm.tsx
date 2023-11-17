@@ -71,7 +71,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
             setInputValue(event.target.value);
             if (error) setError('');
           }}
-          placeholder="Enter your email here"
+          placeholder={t('enter_your_email') as string}
           className={`${inputWidth} border-2 rounded-l-2xl border-r-0 ${
             error ? 'border-red-500' : 'border-amber-500'
           } px-3 py-4`}
