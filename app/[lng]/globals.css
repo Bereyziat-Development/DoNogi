@@ -31,10 +31,8 @@ body {
 }
 
 .text-gradient {
-  position: relative;
   background: var(--cta-gradient);
   background-clip: text;
-  display: inline;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

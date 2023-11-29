@@ -30,7 +30,11 @@ function DetailPageProfiles(props: PageTypes['params']) {
         </div>
         <div className="relative w-full flex flex-col-reverse gap-y-10 sm:grid grid-cols-2 px-4">
           <div className="justify-self-end space-y-2 md:space-y-6 flex flex-col justify-center max-w-[559px]">
-            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
+            <h1
+              className={`text-gradient ${
+                isLocalePL ? 'h-[6.5rem] md:transform md:translate-y-2' : ''
+              }  text-4xl lg:text-5xl font-bold leading-[150%]`}
+            >
               {t('detailed_pet_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">

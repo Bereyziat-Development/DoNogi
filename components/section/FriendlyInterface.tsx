@@ -7,6 +7,7 @@ function FriendlyInterface(props: PageTypes['params']) {
   const { lng } = props;
 
   const { t } = useTranslation(lng);
+  const isLocalePL = lng === LanguageEnum.PL;
 
   return (
     <section className="relative my-24 md:mt-0">
@@ -37,7 +38,13 @@ function FriendlyInterface(props: PageTypes['params']) {
             />
           </div>
           <div className="-mt-10 md:-mt-20 space-y-2 md:space-y-6 px-4 flex flex-col justify-center max-w-[500px] md:max-w-[559px]">
-            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%] z-50">
+            <h1
+              className={`text-gradient ${
+                isLocalePL
+                  ? 'h-[6.5rem] md:h-[3.5rem] md:transform md:translate-y-2'
+                  : ''
+              } text-4xl lg:text-5xl font-bold leading-[150%]`}
+            >
               {t('friendly_interface_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">

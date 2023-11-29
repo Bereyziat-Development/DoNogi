@@ -40,7 +40,11 @@ function Localisation(props: PageTypes['params']) {
             />
           </div>
           <div className="sm:-mt-32 space-y-2 md:space-y-6 sm:px-4 flex flex-col justify-center max-w-[559px] z-10">
-            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
+            <h1
+              className={`text-gradient ${
+                isLocalePL ? 'h-[3.5rem] transform translate-y-2' : ''
+              } text-4xl lg:text-5xl font-bold leading-[150%]`}
+            >
               {t('localization_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%]">

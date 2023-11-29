@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import WaitingListForm from '@/components/WaitingListForm';
-import { PageTypes } from '@/@types/page-types';
+import { LanguageEnum, PageTypes } from '@/@types/page-types';
 import Translation from '@/components/Translation';
 import { useTranslation } from '@/app/i18n/client';
 
@@ -12,6 +12,7 @@ function Hero(props: PageTypes['params']) {
   const { t } = useTranslation(lng);
 
   const isWebsitePublished = process.env.NEXT_PUBLIC_PUBLISH_WEBSITE === 'true';
+  const isLocalePL = lng === LanguageEnum.PL;
 
   return (
     <section className="lg:container mx-auto md:pt-10 sm:pt-0 md:py-20 xl:py-10">
@@ -33,7 +34,11 @@ function Hero(props: PageTypes['params']) {
       </div>
       <div className="px-8 md:py-20 w-full relative flex flex-col-reverse items-center md:grid grid-cols-2">
         <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center z-50">
-          <h1 className="text-gradient text-5xl lg:text-6xl font-bold leading-[150%]">
+          <h1
+            className={`text-gradient ${
+              isLocalePL ? 'h-[18rem] md:h-[12rem] ' : ''
+            } text-5xl lg:text-6xl font-bold leading-[150%]`}
+          >
             <Translation locales={lng} text="hero_section.title" />
           </h1>
           <p className="text-paragraph text-lg md:text-xl leading-[150%]">

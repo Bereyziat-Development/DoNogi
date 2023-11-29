@@ -30,7 +30,11 @@ function SearchFilter(props: PageTypes['params']) {
         </div>
         <div className="relative w-full flex flex-col-reverse sm:grid grid-cols-2 px-4">
           <div className="justify-self-end space-y-2 md:space-y-6 flex flex-col justify-center max-w-[559px]">
-            <h1 className="text-gradient text-4xl lg:text-5xl font-bold leading-[150%]">
+            <h1
+              className={`text-gradient ${
+                isLocalePL ? 'h-[6.5rem] md:transform md:translate-y-2' : ''
+              } text-4xl lg:text-5xl font-bold leading-[150%]`}
+            >
               {t('search_filter_section.title')}
             </h1>
             <p className="text-paragraph text-xl lg:text-2xl leading-[150%] max-w-[650px]">
