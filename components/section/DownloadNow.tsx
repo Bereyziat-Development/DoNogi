@@ -38,7 +38,7 @@ function DownloadNow(props: PageTypes['params']) {
             className="object-contain object-top"
           />
         </div>
-        <div className="hidden lg:block absolute right-0 -bottom-8 inset-y-0 lg:aspect-[2/3] translate-y-3 translate-x-14">
+        <div className="hidden lg:block absolute right-0 -bottom-8 inset-y-0 lg:aspect-[1/2.4] xl:aspect-[2/3] lg:translate-y-24 xl:translate-y-3 translate-x-14">
           <Image
             src="/images/desktop/LostDogImage.png"
             alt="lost dog"
@@ -49,7 +49,7 @@ function DownloadNow(props: PageTypes['params']) {
 
         <div className="block lg:hidden w-full aspect-video" />
 
-        <div className="relative md:max-w-[405px] xl:max-w-[505px] mx-auto px-2 sm:px-10 md:px-0 mt-10 lg:mt-0 xl:mr-[22rem]">
+        <div className="relative md:max-w-[405px] xl:max-w-[505px] mx-auto px-2 sm:px-10 md:px-0 mt-10 lg:mt-0 lg:translate-x-24 xl:mr-[22rem]">
           <h1 className="text-gradient font-bold text-4xl sm:text-5xl xl:text-6xl text-center md:text-left whitespace-nowrap">
             {t('download_now_section.title')}
           </h1>
