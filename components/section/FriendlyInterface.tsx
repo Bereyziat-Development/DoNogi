@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { PageTypes } from '@/@types/page-types';
+import { LanguageEnum, PageTypes } from '@/@types/page-types';
 import { useTranslation } from '@/app/i18n/client';
 
 function FriendlyInterface(props: PageTypes['params']) {

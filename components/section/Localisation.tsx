@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-import { PageTypes } from '@/@types/page-types';
+import { LanguageEnum, PageTypes } from '@/@types/page-types';
 import { useTranslation } from '@/app/i18n/client';
 
 function Localisation(props: PageTypes['params']) {
   const { lng } = props;
 
   const { t } = useTranslation(lng);
+  const isLocalePL = lng === LanguageEnum.PL;
 
   return (
     <section className="relative mt-24 md:mt-0">
@@ -30,7 +31,9 @@ function Localisation(props: PageTypes['params']) {
         <div className="relative w-full flex flex-col sm:grid grid-cols-2 px-4">
           <div className="relative aspect-square">
             <Image
-              src="/images/desktop/LocalisationImage.png"
+              src={`/images/desktop/LocalisationImage${
+                isLocalePL ? 'PL' : ''
+              }.png`}
               alt="logo"
               fill={true}
               className="object-contain z-10"

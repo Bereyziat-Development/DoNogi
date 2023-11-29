@@ -4,4 +4,15 @@ export interface PageTypes {
   };
 }
 
-export type LanguageUnion = 'en' | 'pl';
+type StringKeyOf<T> = Extract<keyof T, string>;
+
+export type LowercaseKeys<T> = {
+  [K in StringKeyOf<T> as Lowercase<K>]: T[K];
+};
+
+export enum LanguageEnum {
+  PL = 'pl',
+  EN = 'en',
+}
+
+export type LanguageUnion = keyof LowercaseKeys<typeof LanguageEnum>;

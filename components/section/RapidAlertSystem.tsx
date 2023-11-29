@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
-import { PageTypes } from '@/@types/page-types';
+import { LanguageEnum, PageTypes } from '@/@types/page-types';
 import { useTranslation } from '@/app/i18n/client';
 
 function RapidAlertSystem(props: PageTypes['params']) {
   const { lng } = props;
 
   const { t } = useTranslation(lng);
+  const isLocalePL = lng === LanguageEnum.PL;
 
   return (
     <section className="relative mt-24 md:mt-0">
@@ -38,7 +39,7 @@ function RapidAlertSystem(props: PageTypes['params']) {
         <div className="relative w-full flex flex-col gap-y-3 sm:grid grid-cols-2 px-4 xl:translate-y-24">
           <div className="relative aspect-[3/4.3] sm:aspect-square">
             <Image
-              src="/images/desktop/AlertImage.png"
+              src={`/images/desktop/AlertImage${isLocalePL ? 'PL' : ''}.png`}
               alt="logo"
               fill={true}
               className="object-contain"
