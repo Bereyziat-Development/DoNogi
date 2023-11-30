@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
+import pawIcon from '@/public/images/PawIcon.svg';
+
 import { LanguageUnion } from '@/@types/page-types';
 import { useTranslation } from '@/app/i18n/client';
+import Image from 'next/image';
 
 interface WaitingListFormProps {
   inputWidth: string;
@@ -18,6 +21,7 @@ export default function WaitingListForm(props: WaitingListFormProps) {
   const { t } = useTranslation(locale);
 
   const [error, setError] = useState<string>('');
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -64,24 +68,33 @@ export default function WaitingListForm(props: WaitingListFormProps) {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col flex-shrink gap-2.5">
       {titleContent}
-      <div className="w-full flex flex-row">
-        <input
-          value={inputValue}
-          onChange={(event) => {
-            setInputValue(event.target.value);
-            if (error) setError('');
-          }}
-          placeholder={t('enter_your_email') as string}
-          className={`${inputWidth} border-2 rounded-l-2xl border-r-0 ${
-            error ? 'border-red-500' : 'border-amber-500'
-          } px-3 py-4`}
-        />
-        <button
-          type="submit"
-          className="btn-gradient px-4 py-4 !rounded-l-none rounded-r-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
-        >
-          {t('buttons.notify_me')}
-        </button>
+      <div className="w-full">
+        <div className='flex flex-row"'>
+          <input
+            value={inputValue}
+            onChange={(event) => {
+              setInputValue(event.target.value);
+              if (error) setError('');
+            }}
+            placeholder={t('enter_your_email') as string}
+            className={`${inputWidth} border-2 rounded-l-2xl border-r-0 ${
+              error ? 'border-red-500' : 'border-amber-500'
+            } px-3 py-4`}
+          />
+          <button
+            type="submit"
+            className="btn-gradient px-4 py-4 !rounded-l-none rounded-r-2xl -translate-x-1.5 font-semibold whitespace-nowrap"
+          >
+            {t('buttons.notify_me')}
+          </button>
+        </div>
+
+        {/*<div className="bg-red-500 flex justify-center w-full">*/}
+        {/*  <div className="flex justify-center">*/}
+        {/*    <Image alt="paw-icon" src={pawIcon} width={30} height={30} />*/}
+        {/*    <Image alt="paw-icon" src={pawIcon} width={30} height={30} />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
       {error && <p className="text-red-500">{error}</p>}
     </form>
