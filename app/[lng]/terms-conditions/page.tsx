@@ -16,9 +16,7 @@ type Post<TFrontmatter> = {
   frontmatter: TFrontmatter;
 };
 
-export async function getMdxContent(
-  filepath: string,
-): Promise<Post<Frontmatter>> {
+async function getMdxContent(filepath: string): Promise<Post<Frontmatter>> {
   // Read the file from the filesystem
   const raw = await fs.readFile(filepath, 'utf-8');
 
@@ -37,7 +35,9 @@ export async function getMdxContent(
   };
 }
 
-export default async function TermsAndConditionPage(props: PageTypes) {
+export default async function TermsAndConditionPage(
+  props: Omit<PageTypes, 'children'>,
+) {
   const {
     params: { lng },
   } = props;

@@ -2,6 +2,7 @@ export interface PageTypes {
   params: {
     lng: LanguageUnion;
   };
+  children?: React.ReactNode;
 }
 
 type StringKeyOf<T> = Extract<keyof T, string>;

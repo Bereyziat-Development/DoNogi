@@ -4,10 +4,8 @@ import Navigation from '@/components/layout/Navigation';
 
 export default function PrivacyPolicyLayout({
   children,
-  lng,
-}: {
-  children: React.ReactNode;
-} & PageTypes['params']) {
+  params: { lng },
+}: PageTypes) {
   return (
     <div className="w-full">
       <Navigation />

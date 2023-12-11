@@ -16,7 +16,7 @@ import { useTranslation } from '@/app/i18n/client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Home(props: PageTypes) {
+export default function Home(props: Omit<PageTypes, 'children'>) {
   const {
     params: { lng },
   } = props;
