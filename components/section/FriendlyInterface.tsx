@@ -41,7 +41,7 @@ function FriendlyInterface(props: PageTypes['params']) {
             <h1
               className={`text-gradient ${
                 isLocalePL
-                  ? 'h-[6.5rem] md:h-[3.5rem] md:transform md:translate-y-2'
+                  ? 'h-[3.5rem] md:h-[3.5rem] md:transform md:translate-y-2'
                   : ''
               } text-4xl lg:text-5xl font-bold leading-[150%]`}
             >

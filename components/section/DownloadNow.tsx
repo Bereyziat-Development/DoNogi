@@ -22,7 +22,7 @@ function DownloadNow(props: PageTypes['params']) {
             '40px 40px 64px 0px rgba(255, 216, 40, 0.30), 10px 10px 40px 0px rgba(214, 106, 28, 0.50)',
         }}
       >
-        <div className="hidden lg:block absolute left-0 top-0 inset-y-0 lg:aspect-square xl:aspect-video">
+        <div className="hidden xl:block absolute xl:-left-16 top-0 inset-y-0 lg:aspect-square xl:aspect-video">
           <Image
             src="/images/desktop/PhoneMockupsImage.png"
             alt="phone mockup"
@@ -30,7 +30,7 @@ function DownloadNow(props: PageTypes['params']) {
             className="object-cover"
           />
         </div>
-        <div className="absolute lg:hidden w-full left-0 top-0 aspect-[2/3]">
+        <div className="absolute xl:hidden w-full left-0 top-0 aspect-[2/3]">
           <Image
             src="/images/tablet-v/PhoneMockupsImage.png"
             alt="phone mockup"
@@ -38,7 +38,7 @@ function DownloadNow(props: PageTypes['params']) {
             className="object-contain object-top"
           />
         </div>
-        <div className="hidden lg:block absolute right-0 -bottom-8 inset-y-0 lg:aspect-[1/2.4] xl:aspect-[2/3] lg:translate-y-24 xl:translate-y-3 translate-x-14">
+        <div className="hidden xl:block absolute right-0 -bottom-8 inset-y-0 lg:aspect-[1/2.4] xl:aspect-[2/3.5] lg:translate-y-24 xl:translate-y-12 translate-x-14">
           <Image
             src="/images/desktop/LostDogImage.png"
             alt="lost dog"
@@ -47,9 +47,9 @@ function DownloadNow(props: PageTypes['params']) {
           />
         </div>
 
-        <div className="block lg:hidden w-full aspect-video" />
+        <div className="block xl:hidden w-full aspect-video" />
 
-        <div className="relative md:max-w-[405px] xl:max-w-[505px] mx-auto px-2 sm:px-10 md:px-0 mt-10 lg:mt-0 lg:translate-x-24 xl:mr-[22rem]">
+        <div className="relative sm:max-w-[405px] md:max-w-[505px] mx-auto px-2 sm:px-10 xl:px-0 mt-10 xl:mt-0 xl:translate-x-44 xl:mr-[22rem]">
           <h1 className="text-gradient font-bold text-4xl sm:text-5xl xl:text-6xl text-center md:text-left whitespace-nowrap">
             {t('download_now_section.title')}
           </h1>

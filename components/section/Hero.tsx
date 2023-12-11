@@ -36,9 +36,7 @@ function Hero(props: PageTypes['params']) {
         <div className="max-w-[537px] mt-16 lg:mt-0 md:max-w-none space-y-2 md:space-y-6 md:px-8 flex flex-col justify-center z-50">
           <h1
             className={`text-gradient-hero ${
-              isLocalePL
-                ? 'md:h-[18rem] lg:h-[12rem] xl:h-[17.5rem] 2xl:h-[13rem]'
-                : ''
+              isLocalePL ? 'md:h-[18rem] lg:h-[17.5rem] 2xl:h-[13rem]' : ''
             } text-5xl lg:text-6xl font-bold leading-[150%]`}
           >
             <Translation locales={lng} text="hero_section.title" />
