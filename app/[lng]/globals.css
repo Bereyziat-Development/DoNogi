@@ -5,12 +5,16 @@
 @tailwind utilities;
 
 :root {
-  --primary: #E28800;
-  --secondary: #9D3C27;
+  --primary: #e28800;
+  --secondary: #9d3c27;
   --paragraph: #857369;
-  --yellow: #FFE999;
-  --brown: #7F1C0B;
-  --cta-gradient: linear-gradient(314deg, var(--secondary) 2.09%, var(--primary)  100%);
+  --yellow: #ffe999;
+  --brown: #7f1c0b;
+  --cta-gradient: linear-gradient(
+    314deg,
+    var(--secondary) 2.09%,
+    var(--primary) 100%
+  );
 }
 
 body {
@@ -26,13 +30,17 @@ body {
   color: white;
 }
 
-.box-shadow-gradient {
-  box-shadow: 4px 4px 26px 0 rgba(229, 144, 4, 0.70);
-}
-
 .text-gradient {
   background: var(--cta-gradient);
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-hero {
+  background: var(--cta-gradient);
+  background-clip: text;
+  line-height: 115% !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -42,10 +50,10 @@ body {
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline;
-  color:transparent;
+  color: transparent;
   background:
-          var(--cta-gradient),
-          var(--cta-gradient)  bottom 2px left 0/100% 2px no-repeat;
-  background-clip: text,padding-box;
-  -webkit-background-clip: text,padding-box;
+    var(--cta-gradient),
+    var(--cta-gradient) bottom 2px left 0/100% 2px no-repeat;
+  background-clip: text, padding-box;
+  -webkit-background-clip: text, padding-box;
 }
